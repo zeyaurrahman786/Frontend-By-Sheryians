@@ -23,6 +23,9 @@ html, body{
     height: 100%;
     width: 45%;
     background-color: #333;
+    background-image: url(https://wallpaperbuzz.net/wp-content/uploads/2023/11/Animal-HD-WAllpaper-9-1536x1351.jpg);
+    background-size: cover;
+    background-position: top;
 }
 
 #right{
@@ -50,6 +53,10 @@ html, body{
     padding: 10px 10px;
 }
 
+.song-card:hover{
+    background-color: #5a5a5a5a;
+}
+
 .song-card .part1{
     display: flex;
     align-items: center;
@@ -72,4 +79,31 @@ html, body{
 
 .song-card:nth-last-child(1){
     border-bottom: 1px solid #5a5a5a;
+}
+
+#player{
+    height: 15%;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#player h3{
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#player h3 i{
+    font-size: 24px;
+}
+
+#player h3:active{
+    scale: 0.93;
 }
