@@ -23,7 +23,7 @@ html, body{
     height: 100%;
     width: 45%;
     background-color: #333;
-    background-image: url(https://wallpaperbuzz.net/wp-content/uploads/2023/11/Animal-HD-WAllpaper-9-1536x1351.jpg);
+    /* background-image: url(https://wallpaperbuzz.net/wp-content/uploads/2023/11/Animal-HD-WAllpaper-9-1536x1351.jpg); */
     background-size: cover;
     background-position: top;
 }
@@ -60,6 +60,7 @@ html, body{
 .song-card .part1{
     display: flex;
     align-items: center;
+    pointer-events: none;
 }
 .song-card img{
     height: 55px;
