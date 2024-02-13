@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    color: #fff;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 85%;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    padding: 5vw 10vw;
+}
+
+#left{
+    height: 100%;
+    width: 45%;
+    background-color: #333;
+}
+
+#right{
+    height: 100%;
+    width: 55%;
+    /* background-color: blue; */
+    padding: 0 3vw;
+}
+
+#right h3{
+    font-size: 40px;
+}
+
+#all-songs{
+    /* background-color: red; */
+    height: 85%;
+    margin-top: 30px;
+}
+
+.song-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #5a5a5a;
+    padding: 10px 10px;
+}
+
+.song-card .part1{
+    display: flex;
+    align-items: center;
+}
+.song-card img{
+    height: 55px;
+    width: 55px;
+    margin-right: 20px;
+}
+
+.song-card h2{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.song-card h6{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.song-card:nth-last-child(1){
+    border-bottom: 1px solid #5a5a5a;
+}
