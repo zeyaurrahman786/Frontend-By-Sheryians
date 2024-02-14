@@ -58,6 +58,8 @@ mainFunction();
 
 allSongs.addEventListener("click",function(details){
     selectedSong = details.target.id;
+    play.innerHTML = `<i class="ri-pause-mini-fill"></i>`;
+    flag = 1;
     mainFunction();
     audio.play();
 });
@@ -74,5 +76,31 @@ play.addEventListener("click",function(){
     mainFunction();
     audio.pause();
     flag = 0;
+    }
+});
+
+forward.addEventListener("click",function(){
+    if(selectedSong < array.length - 1)
+    {
+        selectedSong++;
+        mainFunction();
+        audio.play();
+    }
+    else
+    {
+        forward.style.opacity = 0.4;
+    }
+});
+
+backward.addEventListener("click",function(){
+    if(selectedSong > 0)
+    {
+        selectedSong--;
+        mainFunction();
+        audio.play();
+    }
+    else
+    {
+        backward.style.opacity = 0.4;
     }
 });
