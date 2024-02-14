@@ -25,7 +25,15 @@ var array = [
 
 var allSongs = document.querySelector("#all-songs");
 
+var posters = document.querySelector("#left");
+
+var play = document.querySelector("#play");
+var backward = document.querySelector("#backward");
+var forward = document.querySelector("#forward");
+
 var audio = new Audio();
+
+var selectedSong = 0;
 
 function mainFunction(){
     var clutter = "";
@@ -39,12 +47,32 @@ array.forEach(function(element,index){
     <h6>3:56</h6>
 </div>`;
 });
-
 allSongs.innerHTML = clutter;
+
+audio.src = array [selectedSong].url;
+
+posters.style.backgroundImage = `url(${array [selectedSong].image})`;
+
 }
 mainFunction();
 
 allSongs.addEventListener("click",function(details){
-    audio.src = array[details.target.id].url;
+    selectedSong = details.target.id;
+    mainFunction();
     audio.play();
+});
+
+var flag = 0;
+play.addEventListener("click",function(){
+    if(flag == 0){
+    play.innerHTML = `<i class="ri-pause-mini-fill"></i>`;
+    mainFunction();
+    audio.play();
+    flag = 1;
+    }else{
+    play.innerHTML = `<i class="ri-play-mini-fill"></i>`;
+    mainFunction();
+    audio.pause();
+    flag = 0;
+    }
 });
