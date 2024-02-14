@@ -23,11 +23,12 @@ var array = [
     {songName:"Nimbu Kharbuja Bahil Madam",url:"./songs/Nimbu Kharbuja Bhail Madam.mp3",image:"./posters/KhesariLal.jpg"}
 ];
 
-var allSongs = document.querySelector("#all-songs")
+var allSongs = document.querySelector("#all-songs");
 
 var audio = new Audio();
 
-var clutter = "";
+function mainFunction(){
+    var clutter = "";
 
 array.forEach(function(element,index){
     clutter += `<div class="song-card" id=${index}>
@@ -37,10 +38,13 @@ array.forEach(function(element,index){
     </div>
     <h6>3:56</h6>
 </div>`;
-})
+});
 
 allSongs.innerHTML = clutter;
+}
+mainFunction();
 
 allSongs.addEventListener("click",function(details){
-    console.log(array[details.target.id]);
-})
+    audio.src = array[details.target.id].url;
+    audio.play();
+});
